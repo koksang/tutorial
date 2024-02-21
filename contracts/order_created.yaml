@@ -1,0 +1,30 @@
+id: 3b5e0d80-507b-43b1-88fb-7f66edeb71a1
+dataAssetResourceName: protobuf://git@github.com:koksang/tutorial/event_schemas/OrderCreated.proto:tutorial.OrderCreated
+doc: "PLACEHOLDER: Add documentation"
+name: OrderCreated
+namespace: "sandbox"
+owner: "kok.sang@mindvalley.com"
+schema:
+  - name: order_id
+    type: string
+    bytes: 2147483648
+    doc: "PLACEHOLDER: Add documentation"
+  - name: user_id
+    type: string
+    bytes: 2147483648
+    doc: "PLACEHOLDER: Add documentation"
+  - name: total_amount
+    type: float
+    bits: 32
+    doc: "PLACEHOLDER: Add documentation"
+  - name: created_at
+    type: int
+    logical: build.recap.Timestamp
+    unit: nanosecond
+    timezone: UTC
+    bits: 64
+    doc: "PLACEHOLDER: Add documentation"
+  - name: total_items
+    type: int
+    bits: 32
+    doc: "PLACEHOLDER: Add documentation"
