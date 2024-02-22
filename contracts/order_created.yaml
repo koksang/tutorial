@@ -14,7 +14,7 @@ schema:
     bytes: 2147483648
     doc: "User ID"
   - name: total_amount
-    type: float
+    type: int
     bits: 32
     doc: "Total amount"
   - name: created_at
