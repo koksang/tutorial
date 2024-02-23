@@ -6,7 +6,7 @@ namespace: test
 owner: kok.sang@mindvalley.com
 schema:
   - name: order_id
-    type: string
+    type: int32
     bytes: 2147483648
     doc: "Order ID"
   - name: user_id
@@ -14,7 +14,7 @@ schema:
     bytes: 2147483648
     doc: "User ID"
   - name: total_amount
-    type: float
+    type: int32
     bits: 32
     doc: "Total amount"
   - name: created_at

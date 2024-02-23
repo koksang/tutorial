@@ -36,17 +36,17 @@ def upgrade() -> None:
     # op.alter_column("order_details", "total_price", type_=sa.Integer)
 
 
-# def downgrade() -> None:
-#     op.alter_column(
-#         "order_created",
-#         "order_id",
-#         nullable=False,
-#     )
+def downgrade() -> None:
+    op.alter_column(
+        "order_created",
+        "order_id",
+        nullable=False,
+    )
 
-#     # Alter the column type back to Numeric
-#     op.alter_column("order_created", "total_amount", type_=sa.Numeric(10, 2))
-#     # op.alter_column("order_details", "total_price", type_=sa.Numeric(10, 2))
+    # Alter the column type back to Numeric
+    op.alter_column("order_created", "total_amount", type_=sa.Numeric(10, 2))
+    # op.alter_column("order_details", "total_price", type_=sa.Numeric(10, 2))
 
-#     # Convert integer values back to their decimal representations
-#     op.execute("UPDATE order_created SET total_amount = total_amount / 100.0")
-#     # op.execute("UPDATE order_details SET total_price = total_price / 100.0")
+    # Convert integer values back to their decimal representations
+    op.execute("UPDATE order_created SET total_amount = total_amount / 100.0")
+    # op.execute("UPDATE order_details SET total_price = total_price / 100.0")
